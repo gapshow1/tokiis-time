@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <title>Tokiis - icono</title>
+  <rect width="512" height="512" rx="112" fill="#19C2B0"/>
+  <circle cx="193" cy="115" r="46" fill="#FFC93C"/>
+  <circle cx="319" cy="115" r="46" fill="#FFC93C"/>
+  <rect x="151" y="199" width="84" height="244" rx="42" fill="#FF6B5B"/>
+  <rect x="277" y="199" width="84" height="244" rx="42" fill="#FF6B5B"/>
+</svg>

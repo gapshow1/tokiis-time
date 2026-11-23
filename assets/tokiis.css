@@ -1,0 +1,45 @@
+/* Animaciones de los Tokiis (de documentos/tokiis/tokiis-vivos.html) */
+
+  .life{transform-origin:120px 260px;animation:bob 3.2s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+  .m-cansado{animation-duration:5.5s}
+  .m-triste{animation:bobSmall 6s ease-in-out infinite}
+  @keyframes bobSmall{0%,100%{transform:translateY(0)}50%{transform:translateY(-2px)}}
+  .m-dormido{animation:breathe 4.5s ease-in-out infinite}
+  @keyframes breathe{0%,100%{transform:scale(1,1)}50%{transform:scale(1.015,1.04)}}
+  .m-festejando{animation:hop .7s ease-in-out infinite}
+  @keyframes hop{0%,100%{transform:translateY(0)}45%{transform:translateY(-26px)}}
+  .m-hambre{animation:shake 1.4s ease-in-out infinite}
+  @keyframes shake{0%,100%{transform:rotate(0)}20%{transform:rotate(-2deg)}40%{transform:rotate(2deg)}60%{transform:rotate(0)}}
+  .eyes{transform-box:fill-box;transform-origin:center;animation:blink 4.5s infinite}
+  @keyframes blink{0%,91%,100%{transform:scaleY(1)}94%{transform:scaleY(.1)}}
+  .ant{transform-box:fill-box;transform-origin:center;animation:glow 2.4s ease-in-out infinite}
+  .m-festejando .ant{animation-duration:.5s}
+  .m-dormido .ant,.m-triste .ant,.m-cansado .ant,.m-sueno .ant{animation:none;opacity:.6}
+  @keyframes glow{0%,100%{transform:scale(1);filter:none}50%{transform:scale(1.2);filter:drop-shadow(0 0 7px #FFC93C)}}
+  .tail{transform-box:fill-box;animation:wag 1.6s ease-in-out infinite}
+  .m-festejando .tail{animation-duration:.4s}
+  .m-dormido .tail,.m-triste .tail{animation:none}
+  @keyframes wag{0%,100%{transform:rotate(-7deg)}50%{transform:rotate(8deg)}}
+  .wingL{transform-box:fill-box;transform-origin:right center;animation:flapL .5s ease-in-out infinite}
+  .wingR{transform-box:fill-box;transform-origin:left center;animation:flapR .5s ease-in-out infinite}
+  @keyframes flapL{0%,100%{transform:rotate(0)}50%{transform:rotate(18deg)}}
+  @keyframes flapR{0%,100%{transform:rotate(0)}50%{transform:rotate(-18deg)}}
+  .belly{animation:mood 6s ease-in-out infinite}
+  @keyframes mood{0%,100%{fill:#FFC9B9}33%{fill:#BFEFE8}66%{fill:#FFE7A3}}
+  .tipglow{animation:tip 2.4s ease-in-out infinite}
+  @keyframes tip{0%,100%{filter:none}50%{filter:drop-shadow(0 0 8px #FFC93C)}}
+  .chew{transform-box:fill-box;transform-origin:center;animation:chew .32s ease-in-out infinite}
+  @keyframes chew{0%,100%{transform:scaleY(1)}50%{transform:scaleY(.35)}}
+  .apple-eat{transform-box:fill-box;transform-origin:center;animation:eat 2.6s ease-in forwards}
+  @keyframes eat{0%{transform:scale(1);opacity:1}80%{transform:scale(.25);opacity:1}100%{transform:scale(0);opacity:0}}
+  .zz{opacity:0;animation:zfloat 3s ease-in-out infinite}
+  @keyframes zfloat{0%{opacity:0;transform:translate(0,0)}20%{opacity:1}100%{opacity:0;transform:translate(14px,-34px)}}
+  .tear{animation:drip 2s ease-in infinite}
+  @keyframes drip{0%{transform:translateY(0);opacity:1}100%{transform:translateY(12px);opacity:0}}
+  .grr{transform-box:fill-box;transform-origin:center;animation:grr .4s ease-in-out infinite}
+  @keyframes grr{0%,100%{transform:translateX(0)}50%{transform:translateX(2px)}}
+  .conf{animation:fall 1.8s linear infinite}
+  @keyframes fall{0%{transform:translateY(-10px) rotate(0);opacity:1}100%{transform:translateY(170px) rotate(260deg);opacity:0}}
+  
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}}

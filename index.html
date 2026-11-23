@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Tokiis Time · Menos pantalla, más infancia. Y mucho inglés.</title>
+<meta name="description" content="Tokiis Time equilibra el tiempo de pantalla de tus hijos con misiones en el mundo real, los ayuda a desarrollarse y les enseña inglés 15 minutos por día.">
+<link rel="icon" href="assets/img/tokiis-icono.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/tokiis.css">
+<style>
+  :root{
+    --tq:#19C2B0; --tq2:#12A394; --tq-bg:#E4F7F4; --co:#FF6B5B; --co-bg:#FFE6E2; --am:#FFC93C; --am-bg:#FFF3D1;
+    --no:#23395B; --no2:#1B2C47; --cr:#FFF8EC; --bg:#FFFBF4; --tx:#23395B; --mu:#5B6B82; --ln:#EDE6D8; --azul:#2E7BD6;
+    --r:24px; --sh:0 10px 30px rgba(35,57,91,.08);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--tx);font-family:Nunito,system-ui,sans-serif;font-size:18px;line-height:1.55}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  h1,h2,h3{font-family:Fredoka,sans-serif;line-height:1.08;margin:0;letter-spacing:-.01em}
+  h2{font-size:clamp(34px,5vw,54px)}
+  h3{font-size:24px}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  section{padding:90px 0}
+  .kicker{display:inline-block;font-family:Fredoka,sans-serif;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:var(--tq2);background:var(--tq-bg);border-radius:999px;padding:6px 14px;margin-bottom:16px}
+  .lead{font-size:clamp(18px,2vw,21px);color:var(--mu);max-width:720px;margin:16px 0 0}
+  .center{text-align:center}.center .lead{margin-left:auto;margin-right:auto}
+  .btn{display:inline-flex;align-items:center;gap:10px;font-family:Fredoka,sans-serif;font-weight:600;font-size:18px;border-radius:999px;padding:15px 28px;text-decoration:none;border:0;cursor:pointer;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-main{background:var(--co);color:#fff;box-shadow:0 8px 0 #D9503F}
+  .btn-main:active{transform:translateY(4px);box-shadow:0 4px 0 #D9503F}
+  .btn-sec{background:#fff;color:var(--no);box-shadow:0 0 0 2px var(--ln) inset}
+  .grid{display:grid;gap:24px}
+  .card{background:#fff;border-radius:var(--r);padding:28px;box-shadow:var(--sh)}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:999px;padding:8px 16px;font-weight:700;font-size:15px;box-shadow:0 0 0 1px var(--ln) inset}
+
+  /* ---------- logo animado ---------- */
+  .alogo-wrap{display:inline-flex;flex-direction:column;align-items:flex-end;font-size:var(--s,64px);color:var(--c,var(--no))}
+  .alogo{font-family:Fredoka,sans-serif;font-weight:700;display:inline-flex;align-items:baseline;line-height:1;letter-spacing:-.01em}
+  .alogo .a-ii{width:.6em;height:1em;position:relative;top:.02em;overflow:visible}
+  .a-time{font-family:Fredoka,sans-serif;font-weight:600;font-size:.3em;letter-spacing:.12em;color:var(--t,var(--tq));margin-top:-.05em;margin-right:.08em}
+  .anim .a-tok{animation:tokIn .45s cubic-bezier(.2,.9,.3,1.2) both}
+  .anim .a-s{animation:sIn .35s ease-out .45s both}
+  .anim .a-b1,.anim .a-b2{transform-box:fill-box;transform-origin:50% 100%}
+  .anim .a-b1{animation:barUp .38s cubic-bezier(.2,1.6,.4,1) .15s both}
+  .anim .a-b2{animation:barUp .38s cubic-bezier(.2,1.6,.4,1) .32s both}
+  .anim .a-d1,.anim .a-d2{transform-box:fill-box;transform-origin:center}
+  .anim .a-d1{animation:dotDrop .6s cubic-bezier(.3,1.5,.5,1) .53s both, dotGlow 2s ease-in-out 1.4s infinite}
+  .anim .a-d2{animation:dotDrop .6s cubic-bezier(.3,1.5,.5,1) .62s both, dotGlow 2s ease-in-out 1.6s infinite}
+  .anim .a-time{animation:timeIn .5s cubic-bezier(.2,1.4,.4,1) .95s both}
+  @keyframes tokIn{from{opacity:0;translate:-40px 0}to{opacity:1;translate:0 0}}
+  @keyframes sIn{from{opacity:0;scale:.6}to{opacity:1;scale:1}}
+  @keyframes barUp{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+  @keyframes dotDrop{0%{opacity:0;transform:translateY(-70px)}60%{opacity:1}100%{opacity:1;transform:translateY(0)}}
+  @keyframes dotGlow{0%,100%{filter:none}50%{filter:drop-shadow(0 0 8px #FFC93C)}}
+  @keyframes timeIn{from{opacity:0;translate:0 14px}to{opacity:1;translate:0 0}}
+
+  /* ---------- encabezado ---------- */
+  header{position:sticky;top:0;z-index:20;background:rgba(255,251,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+  .nav a.logo{text-decoration:none}
+  .nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0;font-weight:700;font-size:16px}
+  .nav ul a{text-decoration:none;color:var(--mu)}
+  .nav ul a:hover{color:var(--no)}
+  .nav .btn{padding:10px 20px;font-size:16px;box-shadow:0 5px 0 #D9503F}
+  @media (max-width:900px){.nav ul{display:none}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:60px 0 70px;background:radial-gradient(circle at 80% 20%,#FFE9C2 0,transparent 45%),radial-gradient(circle at 10% 90%,#DDF5F1 0,transparent 40%)}
+  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:30px}
+  .hero h1{font-size:clamp(42px,6vw,76px);margin-top:26px}
+  .hero h1 em{font-style:normal;color:var(--tq2)}
+  .hero .ctas{display:flex;gap:16px;flex-wrap:wrap;margin-top:30px}
+  .hero .meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+  .hero-pet{display:flex;justify-content:center;position:relative}
+  .hero-pet .bubble{position:absolute;top:8%;left:0;background:#fff;border-radius:22px;padding:12px 18px;font-family:Fredoka,sans-serif;font-weight:600;box-shadow:var(--sh);max-width:230px}
+  .hero-pet .bubble:after{content:"";position:absolute;right:-10px;bottom:18px;border:10px solid transparent;border-left-color:#fff}
+  .pet svg{width:100%;height:auto;overflow:visible}
+  @media (max-width:860px){.hero-grid{grid-template-columns:1fr}.hero-pet{max-width:320px;margin:0 auto}.hero-pet .bubble{left:-20px}}
+
+  /* ---------- números ---------- */
+  .stats{background:var(--no);color:#fff;padding:56px 0}
+  .stats .grid{grid-template-columns:repeat(4,1fr)}
+  .stat .n{font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(40px,5vw,60px);line-height:1;color:var(--am)}
+  .stat .l{font-weight:700;margin-top:8px}
+  .stat .s{font-size:14px;color:#AFC0DA;margin-top:4px}
+  @media (max-width:860px){.stats .grid{grid-template-columns:1fr 1fr}}
+
+  /* ---------- video ---------- */
+  .video-box{max-width:960px;margin:40px auto 0;border-radius:28px;overflow:hidden;box-shadow:0 30px 60px rgba(35,57,91,.18);background:#000}
+  .video-box video{width:100%;display:block}
+
+  /* ---------- problema ---------- */
+  .duo{grid-template-columns:1fr 1fr;margin-top:40px}
+  .duo .card{display:flex;gap:18px;align-items:center}
+  .duo .e{font-size:54px}
+  @media (max-width:760px){.duo{grid-template-columns:1fr}}
+
+  /* ---------- cómo funciona ---------- */
+  .steps{grid-template-columns:repeat(4,1fr);margin-top:50px}
+  .step{text-align:center}
+  .step .ph{max-width:220px;margin:0 auto 18px;filter:drop-shadow(0 18px 24px rgba(35,57,91,.18))}
+  .step .num{display:inline-flex;width:38px;height:38px;border-radius:50%;background:var(--tq);color:#fff;align-items:center;justify-content:center;font-family:Fredoka;font-weight:700;margin-bottom:10px}
+  .step p{color:var(--mu);margin:8px 0 0;font-size:16px}
+  @media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.steps{grid-template-columns:1fr}}
+  .note{margin-top:34px;text-align:center;color:var(--mu)}
+
+  /* ---------- filas con teléfono ---------- */
+  .split{display:grid;grid-template-columns:1fr 360px;gap:60px;align-items:center}
+  .split.rev{grid-template-columns:360px 1fr}
+  .split.rev .txt{order:2}
+  .split .ph{max-width:300px;margin:0 auto;filter:drop-shadow(0 24px 30px rgba(35,57,91,.2))}
+  .list{list-style:none;padding:0;margin:26px 0 0}
+  .list li{display:flex;gap:16px;align-items:flex-start;margin-bottom:18px}
+  .list .ic{flex:none;width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px}
+  .list b{display:block;font-family:Fredoka,sans-serif;font-weight:600;font-size:20px}
+  .list span{color:var(--mu);font-size:16px}
+  @media (max-width:860px){.split,.split.rev{grid-template-columns:1fr}.split.rev .txt{order:0}}
+
+  /* ---------- desarrollo ---------- */
+  .ages{grid-template-columns:repeat(4,1fr);margin-top:44px}
+  .age{border-top:8px solid var(--tq)}
+  .age .ico{font-size:40px}
+  .age h3{margin:6px 0 4px}
+  .age .yr{font-weight:800;color:var(--mu);font-size:15px}
+  .age ul{padding-left:18px;margin:12px 0 0;font-size:16px}
+  .age .ej{margin-top:12px;font-size:14px;background:var(--cr);border-radius:12px;padding:10px 12px;color:var(--mu)}
+  @media (max-width:980px){.ages{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.ages{grid-template-columns:1fr}}
+
+  /* ---------- inglés ---------- */
+  .english{background:linear-gradient(180deg,#EAF3FE,#F6FAFF)}
+  .eng-top{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+  .big90{font-family:Fredoka,sans-serif;font-weight:700;font-size:clamp(70px,11vw,140px);line-height:.9;color:var(--azul)}
+  .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+  .levels{grid-template-columns:repeat(4,1fr);margin-top:50px}
+  .lv h3{font-size:22px}
+  .lv .w{font-family:Fredoka;font-weight:700;font-size:30px;color:var(--azul);margin-top:8px}
+  .lv p{font-size:15px;color:var(--mu);margin:6px 0 0}
+  .key{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .key .card{text-align:center}
+  .key .m{font-family:Fredoka;font-weight:700;font-size:44px;color:var(--azul)}
+  @media (max-width:900px){.eng-top{grid-template-columns:1fr}.levels{grid-template-columns:1fr 1fr}.key{grid-template-columns:1fr}}
+
+  /* ---------- tokiis ---------- */
+  .tokiis{background:linear-gradient(160deg,var(--tq),var(--tq2));color:#fff}
+  .tokiis .lead{color:#E3FAF6}
+  .tokiis .kicker{background:rgba(255,255,255,.18);color:#fff}
+  .pets{grid-template-columns:repeat(5,1fr);margin-top:50px}
+  .petcard{background:rgba(255,255,255,.12);border-radius:var(--r);padding:18px 14px 20px;text-align:center;cursor:pointer;transition:transform .2s}
+  .petcard:hover{transform:translateY(-4px)}
+  .petcard .pet{max-width:180px;margin:0 auto}
+  .petcard h3{margin-top:8px;font-size:28px}
+  .petcard p{margin:4px 0 0;font-size:15px;color:#E3FAF6}
+  .moods{grid-template-columns:repeat(4,1fr);margin-top:40px}
+  .mood{background:var(--cr);border-radius:var(--r);padding:14px 14px 18px;text-align:center;color:var(--no)}
+  .mood.night{background:linear-gradient(#1B2C47,#34507D);color:#fff}
+  .mood .pet{max-width:170px;margin:0 auto}
+  .mood b{font-family:Fredoka;font-size:22px}
+  @media (max-width:900px){.pets{grid-template-columns:repeat(3,1fr)}.moods{grid-template-columns:1fr 1fr}}
+  @media (max-width:520px){.pets{grid-template-columns:1fr 1fr}}
+
+  /* ---------- medallas ---------- */
+  .medals{display:flex;justify-content:center;gap:40px;flex-wrap:wrap;margin-top:44px}
+  .medal{text-align:center}
+  .medal .c{width:150px;height:150px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:84px;box-shadow:0 10px 0 rgba(35,57,91,.08)}
+  .medal b{font-family:Fredoka;font-size:24px;display:block;margin-top:12px}
+
+  /* ---------- app padres ---------- */
+  .phones{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin-top:50px}
+  .phones figure{margin:0;width:230px;text-align:center}
+  .phones img{filter:drop-shadow(0 18px 24px rgba(35,57,91,.18))}
+  .phones figcaption{margin-top:14px;font-family:Fredoka;font-weight:600}
+  .phones figcaption span{display:block;font-family:Nunito;font-weight:400;font-size:15px;color:var(--mu)}
+
+  /* ---------- seguridad ---------- */
+  .safe{grid-template-columns:repeat(3,1fr);margin-top:44px}
+  .safe .card .e{font-size:36px}
+  .safe h3{margin:10px 0 6px;font-size:21px}
+  .safe p{margin:0;color:var(--mu);font-size:16px}
+  @media (max-width:900px){.safe{grid-template-columns:1fr 1fr}}
+  @media (max-width:560px){.safe{grid-template-columns:1fr}}
+
+  /* ---------- precio ---------- */
+  .price-card{max-width:620px;margin:44px auto 0;background:#fff;border-radius:32px;padding:40px;text-align:center;box-shadow:var(--sh);border:3px solid var(--tq)}
+  .price-card .free{font-family:Fredoka;font-weight:700;font-size:clamp(40px,6vw,58px);color:var(--tq2)}
+  .price-card .amount{font-family:Fredoka;font-weight:700;font-size:48px;margin-top:14px}
+  .price-card .amount small{font-size:20px;color:var(--mu)}
+  .price-card ul{list-style:none;padding:0;margin:22px 0 28px;text-align:left;display:inline-block}
+  .price-card li{margin:8px 0}
+  .price-card li:before{content:"✓";color:var(--tq2);font-weight:800;margin-right:10px}
+
+  /* ---------- faq ---------- */
+  .faq{max-width:820px;margin:40px auto 0}
+  details{background:#fff;border-radius:18px;padding:18px 22px;margin-bottom:12px;box-shadow:0 0 0 1px var(--ln) inset}
+  summary{cursor:pointer;font-family:Fredoka,sans-serif;font-weight:600;font-size:20px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary:after{content:"+";color:var(--tq2);font-size:26px;line-height:1}
+  details[open] summary:after{content:"–"}
+  details p{margin:12px 0 0;color:var(--mu)}
+
+  /* ---------- lista de espera ---------- */
+  .wait{background:var(--no);color:#fff}
+  .wait .lead{color:#C9D3E6}
+  .wait form{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px}
+  .wait input,.wait select{font:inherit;font-size:17px;border:0;border-radius:999px;padding:15px 22px;min-width:240px;color:var(--no)}
+  .wait .ok{display:none;margin-top:24px;font-family:Fredoka;font-size:22px;color:var(--am)}
+  .wait small{display:block;margin-top:14px;color:#8FA3C4;font-size:14px}
+
+  /* ---------- sonido ---------- */
+  .sound{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:28px}
+  .sound audio{height:40px}
+
+  footer{padding:50px 0;background:var(--no2);color:#AFC0DA;font-size:15px}
+  footer .row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+  footer a{color:#fff;text-decoration:none;margin-left:18px}
+
+  @media (max-width:560px){.levels{grid-template-columns:1fr}.card{padding:22px}section{padding:64px 0}}
+  .reveal{opacity:0;translate:0 30px;transition:opacity .7s ease,translate .7s ease}
+  .reveal.on{opacity:1;translate:0 0}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;translate:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#inicio" aria-label="Tokiis Time, inicio">
+      <span class="alogo-wrap" style="--s:34px"><span class="alogo"><span>tok</span><svg class="a-ii" viewBox="0 0 60 100" aria-hidden="true"><rect x="5" y="40" width="20" height="58" rx="10" fill="#FF6B5B"/><rect x="35" y="40" width="20" height="58" rx="10" fill="#FF6B5B"/><circle cx="15" cy="20" r="11" fill="#FFC93C"/><circle cx="45" cy="20" r="11" fill="#FFC93C"/></svg><span>s</span></span><span class="a-time">time</span></span>
+    </a>
+    <ul>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#desarrollo">Desarrollo</a></li>
+      <li><a href="#ingles">Inglés</a></li>
+      <li><a href="#padres">Para padres</a></li>
+      <li><a href="#precio">Precio</a></li>
+      <li><a href="#preguntas">Preguntas</a></li>
+    </ul>
+    <a class="btn btn-main" href="#lista">Quiero probarla</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="alogo-wrap anim" id="heroLogo" style="--s:clamp(70px,10vw,120px)">
+        <span class="alogo"><span class="a-tok">tok</span><svg class="a-ii" viewBox="0 0 60 100" aria-hidden="true"><rect class="a-b1" x="5" y="40" width="20" height="58" rx="10" fill="#FF6B5B"/><rect class="a-b2" x="35" y="40" width="20" height="58" rx="10" fill="#FF6B5B"/><circle class="a-d1" cx="15" cy="20" r="11" fill="#FFC93C"/><circle class="a-d2" cx="45" cy="20" r="11" fill="#FFC93C"/></svg><span class="a-s">s</span></span>
+        <span class="a-time">time</span>
+      </div>
+      <h1>Menos pantalla, más infancia. <em>Y mucho inglés.</em></h1>
+      <p class="lead">Tokiis Time equilibra el tiempo de pantalla de tus hijos con misiones en el mundo real, los ayuda a desarrollarse según su edad y les enseña inglés 15 minutos por día.</p>
+      <div class="ctas">
+        <a class="btn btn-main" href="#lista">Probar 7 días gratis</a>
+        <a class="btn btn-sec" href="#video">▶ Ver el video</a>
+      </div>
+      <div class="meta">
+        <span class="pill">👧 De 2 a 14 años</span>
+        <span class="pill">🚫 Sin publicidad</span>
+        <span class="pill">📱 Android · padres también en iPhone</span>
+      </div>
+    </div>
+    <div class="hero-pet">
+      <div class="bubble">¡Hola! Soy Kit. <br>Hello! 👋</div>
+      <div class="pet" data-pet="kit" data-mood="contento" style="width:100%;max-width:400px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NÚMEROS ============ -->
+<section class="stats">
+  <div class="wrap grid">
+    <div class="stat"><div class="n">30 = 30</div><div class="l">30 min de pantalla, 30 de vida real</div><div class="s">Configuración por defecto. Tú la ajustas.</div></div>
+    <div class="stat"><div class="n">+1.400</div><div class="l">actividades reales al año</div><div class="s">Con 4 misiones por día.</div></div>
+    <div class="stat"><div class="n">+90 h</div><div class="l">de inglés al año</div><div class="s">Con solo 15 minutos por día.</div></div>
+    <div class="stat"><div class="n">&lt;17¢</div><div class="l">por día, toda la familia</div><div class="s">US$4,99 por mes.</div></div>
+  </div>
+</section>
+
+<!-- ============ VIDEO ============ -->
+<section id="video">
+  <div class="wrap center reveal">
+    <span class="kicker">Mira cómo funciona</span>
+    <h2>Tokiis Time en 3 minutos</h2>
+    <div class="video-box">
+      <video controls preload="metadata" poster="assets/img/video-portada.jpg">
+        <source src="assets/media/tokiis-time-video.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROBLEMA ============ -->
+<section style="padding-top:20px">
+  <div class="wrap center reveal">
+    <span class="kicker">El problema</span>
+    <h2>¿Mucha pantalla en casa?</h2>
+    <p class="lead">Los chicos pasan horas frente a la tablet. Y las pantallas también tienen cosas buenas: con ellas aprenden colores, números e inglés. El problema no es la pantalla, es el exceso.</p>
+    <div class="grid duo">
+      <div class="card"><span class="e">🚫</span><div><h3>Prohibirla no funciona</h3><p style="margin:6px 0 0;color:var(--mu)">Genera peleas, berrinches y el deseo de usarla todavía más.</p></div></div>
+      <div class="card"><span class="e">♾️</span><div><h3>Sin límites, tampoco</h3><p style="margin:6px 0 0;color:var(--mu)">Se pierde el juego, el movimiento y el tiempo en familia.</p></div></div>
+    </div>
+    <p class="lead" style="margin-top:34px"><b style="color:var(--no)">Tokiis Time encuentra el equilibrio.</b></p>
+  </div>
+</section>
+
+<!-- ============ CÓMO FUNCIONA ============ -->
+<section id="como-funciona" style="background:var(--cr)">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="kicker">Cómo funciona</span>
+      <h2>Cada pausa, una misión real</h2>
+      <p class="lead">Tu hijo usa la pantalla un rato. Después llega una pausa sin pantalla, con una misión para hacer en el mundo real.</p>
+    </div>
+    <div class="grid steps">
+      <div class="step reveal"><img class="ph" src="assets/img/nino-aviso.png" alt="Aviso: elige tu misión"><span class="num">1</span><h3>Elige su misión</h3><p>5 minutos antes, su Tokii le avisa y le propone 3 misiones de distintas áreas.</p></div>
+      <div class="step reveal"><img class="ph" src="assets/img/nino-pausa.png" alt="La pausa"><span class="num">2</span><h3>Pausa sin pantalla</h3><p>La tablet descansa. Él se mueve, dibuja, ayuda en casa o practica inglés.</p></div>
+      <div class="step reveal"><img class="ph" src="assets/img/nino-rendir.png" alt="Rendir cuentas"><span class="num">3</span><h3>Cuenta lo que hizo</h3><p>Con una foto o con su voz. Tú apruebas desde tu celular.</p></div>
+      <div class="step reveal"><img class="ph" src="assets/img/nino-festejo.png" alt="Festejo"><span class="num">4</span><h3>Gana premios</h3><p>Puntos para su medalla semanal y minutos extra de pantalla.</p></div>
+    </div>
+    <p class="note reveal">La pausa siempre se cumple y la pantalla vuelve sola, aunque no haya hecho la misión. Así no hay peleas: solo se pierde el premio.</p>
+  </div>
+</section>
+
+<!-- ============ LÍMITES ============ -->
+<section id="limites">
+  <div class="wrap split">
+    <div class="txt reveal">
+      <span class="kicker">Límites claros</span>
+      <h2>Tú decides. Sin peleas.</h2>
+      <p class="lead">Configuras todo en 5 minutos, paso a paso. Y Tokiis Time hace cumplir las reglas por ti.</p>
+      <ul class="list">
+        <li><span class="ic" style="background:var(--tq-bg)">⏱️</span><div><b>Tiempos a tu medida</b><span>Cuánto tiempo de pantalla por día y cómo se reparte.</span></div></li>
+        <li><span class="ic" style="background:var(--co-bg)">🍽️</span><div><b>Comida, tarea y sueño sin pantallas</b><span>Y si ayuda a poner la mesa o come una fruta, gana minutos extra.</span></div></li>
+        <li><span class="ic" style="background:var(--am-bg)">👨‍👩‍👧</span><div><b>Una tablet para todos tus hijos</b><span>Cada uno con su perfil, su clave y su turno: "16:00 Sofía, 17:00 Mateo".</span></div></li>
+        <li><span class="ic" style="background:#E7ECF5">📲</span><div><b>Modo niño en tu celular</b><span>Si le prestas tu teléfono, solo usa lo permitido y sales con tu huella.</span></div></li>
+      </ul>
+    </div>
+    <img class="ph reveal" src="assets/img/padres-hoy.png" alt="App de padres: Hoy">
+  </div>
+</section>
+
+<!-- ============ DESARROLLO ============ -->
+<section id="desarrollo" style="background:var(--cr)">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="kicker">Desarrollo</span>
+      <h2>Misiones que lo ayudan a crecer</h2>
+      <p class="lead">Cada misión trabaja un área del desarrollo según su edad. Y cada semana recibes un informe con lo que está aprendiendo, explicado en simple.</p>
+    </div>
+    <div class="grid ages">
+      <div class="card age reveal" style="border-color:#FFC93C"><div class="ico">🐣</div><h3>Pequeños</h3><div class="yr">2 a 4 años</div><ul><li>Autonomía</li><li>Lenguaje y juego</li><li>Motricidad</li></ul><div class="ej">"Ponte las medias solo" · "Salta como una rana"</div></div>
+      <div class="card age reveal" style="border-color:#FF6B5B"><div class="ico">🐥</div><h3>Curiosos</h3><div class="yr">5 a 7 años</div><ul><li>Emociones</li><li>Convivencia</li><li>Letras y números</li></ul><div class="ej">"Respira como un globo" · "Riega las plantas"</div></div>
+      <div class="card age reveal" style="border-color:#19C2B0"><div class="ico">🦊</div><h3>Exploradores</h3><div class="yr">8 a 10 años</div><ul><li>Esfuerzo y lectura</li><li>Empatía</li><li>Hábitos y pensamiento</li></ul><div class="ej">"Lee 15 minutos y cuéntalo" · "Prepara tu ropa"</div></div>
+      <div class="card age reveal" style="border-color:#23395B"><div class="ico">🦅</div><h3>Grandes</h3><div class="yr">11 a 14 años</div><ul><li>Organización</li><li>Vínculos sanos</li><li>Ciudadanía digital</li></ul><div class="ej">"Planifica tu semana" · "¿Esta noticia es verdadera?"</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INGLÉS ============ -->
+<section id="ingles" class="english">
+  <div class="wrap">
+    <div class="eng-top">
+      <div class="reveal">
+        <span class="kicker" style="background:#DCEBFC;color:var(--azul)">Inglés todos los días</span>
+        <h2>15 minutos por día.<br>Parece poco…</h2>
+        <div class="big90" style="margin-top:20px">+90 h</div>
+        <p class="lead" style="margin-top:8px"><b style="color:var(--no)">de inglés al año.</b> Con juegos, canciones, cuentos y misiones reales. Y no se descuenta de su tiempo de pantalla.</p>
+        <div class="skills"><span class="pill">👂 Escuchar</span><span class="pill">🗣️ Hablar</span><span class="pill">📖 Leer</span><span class="pill">✍️ Escribir</span></div>
+      </div>
+      <img class="reveal" src="assets/img/nino-festejo.png" alt="Kit aprendió una palabra en inglés" style="max-width:300px;margin:0 auto;filter:drop-shadow(0 24px 30px rgba(35,57,91,.2))">
+    </div>
+    <div class="grid levels">
+      <div class="card lv reveal"><h3>🐣 Semillas</h3><p>2 a 4 años · escucha, repite y canta</p><div class="w">150</div><p>palabras</p></div>
+      <div class="card lv reveal"><h3>🐥 Brotes</h3><p>5 a 7 años · empieza a leer y escribir</p><div class="w">450</div><p>palabras</p></div>
+      <div class="card lv reveal"><h3>🦊 Exploradores</h3><p>8 a 10 años · textos y conversación</p><div class="w">1.000</div><p>palabras</p></div>
+      <div class="card lv reveal"><h3>🦅 Aventureros</h3><p>11 a 14 años · series, videos y párrafos</p><div class="w">2.000</div><p>palabras</p></div>
+    </div>
+    <div class="key">
+      <div class="card reveal"><div class="m">🔑</div><h3>La llave del día</h3><p style="color:var(--mu);margin:8px 0 0;font-size:16px">Lo primero que hace al usar la tablet es su inglés: 5, 10 o 15 minutos según la edad. Después, a jugar.</p></div>
+      <div class="card reveal"><div class="m">🧠</div><h3>Repaso inteligente</h3><p style="color:var(--mu);margin:8px 0 0;font-size:16px">Cada palabra vuelve al día siguiente, a los 3 días, a la semana y al mes, para que no se olvide.</p></div>
+      <div class="card reveal"><div class="m">🦊</div><h3>Le enseña a su Tokii</h3><p style="color:var(--mu);margin:8px 0 0;font-size:16px">Su mascota aprende cada palabra con él. Enseñar a otro es la mejor forma de aprender.</p></div>
+    </div>
+    <p class="note reveal">No necesitas saber inglés: la app pronuncia todo y comprueba lo aprendido con juegos y micrófono. Plan de estudio basado en el Marco Común Europeo de Referencia (MCER).</p>
+  </div>
+</section>
+
+<!-- ============ TOKIIS ============ -->
+<section id="tokiis" class="tokiis">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="kicker">Los Tokiis</span>
+      <h2>Una mascota que aprende con él</h2>
+      <p class="lead">Cada niño elige su Tokii. Lo acompaña todos los días, aprende las mismas palabras y vive sus mismas rutinas. Toca uno para saludarlo.</p>
+    </div>
+    <div class="grid pets">
+      <div class="petcard reveal" data-say="Hello! I'm Kit."><div class="pet" data-pet="kit" data-mood="contento"></div><h3>Kit</h3><p>Le encanta el inglés</p></div>
+      <div class="petcard reveal" data-say="¡Guau! ¿Salimos a jugar?"><div class="pet" data-pet="popi" data-mood="contento"></div><h3>Popi</h3><p>Le encanta moverse</p></div>
+      <div class="petcard reveal" data-say="Respiremos juntos…"><div class="pet" data-pet="mumu" data-mood="contento"></div><h3>Mumu</h3><p>Emociones y calma</p></div>
+      <div class="petcard reveal" data-say="¡Construyamos algo!"><div class="pet" data-pet="rexi" data-mood="contento"></div><h3>Rexi</h3><p>Le encanta crear</p></div>
+      <div class="petcard reveal" data-say="¿Leemos un cuento?"><div class="pet" data-pet="kiro" data-mood="contento"></div><h3>Kiro</h3><p>Le encanta leer</p></div>
+    </div>
+    <h3 class="reveal" style="margin-top:60px;font-size:32px">¡Tienen vida!</h3>
+    <div class="grid moods">
+      <div class="mood reveal"><div class="pet" data-pet="kit" data-mood="contento"></div><b>Juega</b></div>
+      <div class="mood reveal"><div class="pet" data-pet="kit" data-mood="comiendo" data-loop="comiendo"></div><b>Come</b></div>
+      <div class="mood reveal"><div class="pet" data-pet="kit" data-mood="festejando"></div><b>Festeja</b></div>
+      <div class="mood night reveal"><div class="pet" data-pet="kit" data-mood="dormido"></div><b>Duerme</b></div>
+    </div>
+    <p class="note reveal" style="color:#E3FAF6">Un Tokii nunca se enferma ni se muere: como mucho tiene hambre o se pone un poquito triste, y se alegra apenas su niño vuelve.</p>
+  </div>
+</section>
+
+<!-- ============ MEDALLAS ============ -->
+<section id="medallas">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="kicker">Esfuerzo que vale</span>
+      <h2>Medallas con premios de verdad</h2>
+      <p class="lead">Cada semana, según sus misiones, gana una medalla. Y tú decides qué premio real vale cada una: una salida, elegir la cena, un juguete o dinero para su alcancía.</p>
+    </div>
+    <div class="medals">
+      <div class="medal reveal"><div class="c" style="background:#F6DCC6">🥉</div><b>Bronce</b></div>
+      <div class="medal reveal"><div class="c" style="background:#E8ECF1">🥈</div><b>Plata</b></div>
+      <div class="medal reveal"><div class="c" style="background:#FFF1C9">🥇</div><b>Oro</b></div>
+    </div>
+    <p class="note reveal">Cada niño compite contra sus propias metas, nunca contra sus hermanos. La app no maneja dinero: solo registra el premio.</p>
+  </div>
+</section>
+
+<!-- ============ APP DE PADRES ============ -->
+<section id="padres" style="background:var(--cr)">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="kicker">Para padres</span>
+      <h2>Todo desde tu celular</h2>
+      <p class="lead">Una app simple y clara, en Android y en iPhone. Sin complicaciones: configuración paso a paso, una pregunta por pantalla.</p>
+    </div>
+    <div class="phones">
+      <figure class="reveal"><img src="assets/img/padres-aprobar.png" alt="Aprobar misiones"><figcaption>Aprueba sus misiones<span>Con la foto y para qué le sirve</span></figcaption></figure>
+      <figure class="reveal"><img src="assets/img/padres-mensajes.png" alt="Mensajes"><figcaption>Mándale mensajes<span>Texto, voz o programados</span></figcaption></figure>
+      <figure class="reveal"><img src="assets/img/padres-imprimibles.png" alt="Imprimibles"><figcaption>Imprimibles cada mes<span>Para colorear, cuentos e inglés</span></figcaption></figure>
+      <figure class="reveal"><img src="assets/img/padres-progreso.png" alt="Progreso"><figcaption>Mira su progreso<span>Desarrollo, inglés y medallas</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPRIMIBLES ============ -->
+<section id="imprimibles">
+  <div class="wrap split">
+    <div class="txt reveal">
+      <span class="kicker">Imprimibles</span>
+      <h2>Material nuevo cada mes</h2>
+      <p class="lead">¿La misión es dibujar y no se le ocurre qué? Cada mes llega un pack para imprimir, en español e inglés en la misma hoja: para colorear, vocales y números, cuentos de los Tokiis y kits temáticos para los más grandes.</p>
+      <ul class="list">
+        <li><span class="ic" style="background:var(--am-bg)">🖍️</span><div><b>Por edad</b><span>De 2 a 14 años, tú eliges cuáles imprimir.</span></div></li>
+        <li><span class="ic" style="background:var(--tq-bg)">🖨️</span><div><b>Poca tinta</b><span>En blanco y negro, pensados para imprimir en casa o en la fotocopiadora.</span></div></li>
+      </ul>
+      <a class="btn btn-main" style="margin-top:12px" href="assets/docs/tokiis-imprimible-muestra.pdf" download>📄 Descargar muestra gratis</a>
+    </div>
+    <div style="position:relative;width:340px;max-width:100%;margin:0 auto;height:420px"><img src="assets/img/imprimible-vocales.png" alt="Imprimible: las vocales" style="position:absolute;left:0;top:30px;width:250px;border-radius:10px;box-shadow:var(--sh);rotate:-6deg"><img src="assets/img/imprimible-kit.png" alt="Imprimible: colorea a Kit" style="position:absolute;right:0;top:0;width:250px;border-radius:10px;box-shadow:0 18px 40px rgba(35,57,91,.18);rotate:5deg"></div>
+  </div>
+</section>
+
+<!-- ============ GRANDES ============ -->
+<section style="background:var(--no);color:#fff">
+  <div class="wrap split rev">
+    <img class="ph reveal" src="assets/img/grandes.png" alt="Modo para chicos de 11 a 14">
+    <div class="txt reveal">
+      <span class="kicker" style="background:rgba(255,255,255,.12);color:#fff">De 11 a 14 años</span>
+      <h2>Crece con ellos</h2>
+      <p class="lead" style="color:#C9D3E6">Para los más grandes, Tokiis Time cambia: diseño oscuro y sobrio, "retos" en vez de misiones, rachas, estadísticas y una alcancía con meta de ahorro. Y si prefieren, pueden elegir "sin mascota".</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEGURIDAD ============ -->
+<section id="seguridad">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="kicker">Tranquilidad</span>
+      <h2>Segura para tus hijos</h2>
+    </div>
+    <div class="grid safe">
+      <div class="card reveal"><div class="e">🚫</div><h3>Sin publicidad</h3><p>Ni un solo anuncio. Una app que cuida las pantallas no puede llenarlas de publicidad.</p></div>
+      <div class="card reveal"><div class="e">👨‍👩‍👧</div><h3>Solo la familia</h3><p>Nadie desconocido puede escribirle. Los mensajes son solo de padres y cuidadores.</p></div>
+      <div class="card reveal"><div class="e">🔒</div><h3>Fotos privadas</h3><p>Las fotos de las misiones solo las ve la familia y se borran solas con el tiempo.</p></div>
+      <div class="card reveal"><div class="e">🎤</div><h3>Voz protegida</h3><p>Cuando habla en inglés, el audio se procesa y se borra enseguida. Solo queda el resultado.</p></div>
+      <div class="card reveal"><div class="e">🛡️</div><h3>A prueba de trampas</h3><p>No se puede desinstalar ni cambiar la hora sin tu permiso. Y si algo raro pasa, te avisa.</p></div>
+      <div class="card reveal"><div class="e">💛</div><h3>Sin culpa</h3><p>Nada de mensajes que presionen a tu hijo. El Tokii nunca se enferma ni se muere.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRECIO ============ -->
+<section id="precio" style="background:var(--cr)">
+  <div class="wrap center">
+    <div class="reveal">
+      <span class="kicker">Precio</span>
+      <h2>Un solo plan para toda la familia</h2>
+    </div>
+    <div class="price-card reveal">
+      <div class="free">7 días gratis</div>
+      <div class="amount">US$4,99 <small>por mes</small></div>
+      <div style="color:var(--mu)">o US$39,99 por año · menos de 17 centavos por día</div>
+      <ul>
+        <li>Todos tus hijos incluidos, sin costo extra</li>
+        <li>Curso de inglés completo</li>
+        <li>Misiones, Tokiis y medallas</li>
+        <li>App de padres en Android y iPhone</li>
+        <li>Imprimibles nuevos cada mes</li>
+        <li>Te avisamos 2 días antes de que termine la prueba</li>
+        <li>Cancelas cuando quieras</li>
+      </ul>
+      <br><a class="btn btn-main" href="#lista">Quiero probarla</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREGUNTAS ============ -->
+<section id="preguntas">
+  <div class="wrap">
+    <div class="center reveal"><span class="kicker">Preguntas frecuentes</span><h2>¿Tienes dudas?</h2></div>
+    <div class="faq reveal">
+      <details><summary>¿Necesito saber inglés para acompañar a mi hijo?</summary><p>No. La app pronuncia todo y comprueba lo que aprende con juegos y con el micrófono. Además, muchos padres terminan aprendiendo junto con sus hijos.</p></details>
+      <details><summary>¿Funciona en iPhone?</summary><p>La app de los padres funciona en Android y en iPhone. La app del niño funciona en tablets y celulares Android; la versión para iPhone del niño llegará más adelante.</p></details>
+      <details><summary>¿Qué pasa si mi hijo no hace la misión?</summary><p>La pausa se cumple igual y la pantalla vuelve sola cuando termina. Simplemente no gana los puntos ni los minutos extra. Así no hay peleas.</p></details>
+      <details><summary>¿La sesión de inglés gasta tiempo de pantalla?</summary><p>No. Los 5 a 15 minutos diarios de inglés no se descuentan de su tiempo de pantalla.</p></details>
+      <details><summary>Tengo varios hijos y una sola tablet, ¿sirve?</summary><p>Sí. Cada hijo tiene su perfil, su clave y su turno en la misma tablet, y todos entran en una sola suscripción.</p></details>
+      <details><summary>¿Desde qué edad se puede usar?</summary><p>Desde los 2 hasta los 14 años. Las misiones, el inglés y el diseño se adaptan a cada edad.</p></details>
+      <details><summary>¿Puedo cancelar cuando quiera?</summary><p>Sí. Puedes cancelar en cualquier momento, y durante la prueba te avisamos 2 días antes de que se haga el primer cobro.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LISTA DE ESPERA ============ -->
+<section id="lista" class="wait">
+  <div class="wrap center">
+    <div class="alogo-wrap" style="--s:72px;--c:#FFF8EC;--t:#FFC93C"><span class="alogo"><span>tok</span><svg class="a-ii" viewBox="0 0 60 100" aria-hidden="true"><rect x="5" y="40" width="20" height="58" rx="10" fill="#FF6B5B"/><rect x="35" y="40" width="20" height="58" rx="10" fill="#FF6B5B"/><circle cx="15" cy="20" r="11" fill="#FFC93C"/><circle cx="45" cy="20" r="11" fill="#FFC93C"/></svg><span>s</span></span><span class="a-time">time</span></div>
+    <h2 style="margin-top:22px">Muy pronto en tu casa</h2>
+    <p class="lead">Déjanos tu correo y te avisamos apenas Tokiis Time esté disponible, con tu prueba gratis de 7 días.</p>
+    <form id="waitForm" autocomplete="on">
+      <input type="email" name="email" placeholder="Tu correo electrónico" required aria-label="Tu correo electrónico">
+      <select name="edades" aria-label="Edad de tus hijos"><option value="">Edad de tus hijos</option><option>2 a 4 años</option><option>5 a 7 años</option><option>8 a 10 años</option><option>11 a 14 años</option><option>Varias edades</option></select>
+      <button class="btn btn-main" type="submit">Avísenme</button>
+    </form>
+    <div class="ok" id="waitOk">¡Listo! Te avisaremos apenas esté disponible. 🎉</div>
+    <small>Solo usaremos tu correo para avisarte del lanzamiento.</small>
+    <div class="sound">
+      <button class="btn btn-sec" id="playLogo" type="button">🔊 Escucha el sonido de Tokiis Time</button>
+      <audio controls preload="none" src="assets/media/cancion-tokiis-time.mp3" aria-label="Canción Tokiis Time"></audio>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap row">
+    <span>© 2026 Tokiis Time · Menos pantalla, más infancia. Y mucho inglés.</span>
+    <span><a href="#como-funciona">Cómo funciona</a><a href="#ingles">Inglés</a><a href="#precio">Precio</a><a href="#preguntas">Preguntas</a></span>
+  </div>
+</footer>
+
+<audio id="logoSound" preload="auto" src="assets/media/sonido-tokiis.mp3"></audio>
+<script src="assets/tokiis.js"></script>
+<script>
+  // Dibujar los Tokiis animados
+  document.querySelectorAll('[data-pet]').forEach(el => {
+    el.innerHTML = svgFor(el.dataset.pet, 'pequeno', el.dataset.mood, false);
+  });
+  // Kit comiendo: vuelve a comer cada tanto
+  document.querySelectorAll('[data-loop="comiendo"]').forEach(el => {
+    setInterval(() => { el.innerHTML = svgFor('kit', 'pequeno', 'comiendo', false); }, 4000);
+  });
+  // Tocar un Tokii: festeja y saluda
+  document.querySelectorAll('.petcard').forEach(card => {
+    card.addEventListener('click', () => {
+      const pet = card.querySelector('.pet');
+      pet.innerHTML = svgFor(pet.dataset.pet, 'pequeno', 'festejando', false);
+      card.querySelector('p').textContent = card.dataset.say;
+      clearTimeout(card._t);
+      card._t = setTimeout(() => { pet.innerHTML = svgFor(pet.dataset.pet, 'pequeno', 'contento', false); }, 2500);
+    });
+  });
+  // Sonido del logo: suena al tocar el botón o el logo del inicio, y el logo se vuelve a armar
+  const snd = document.getElementById('logoSound');
+  const replayLogo = () => {
+    const l = document.getElementById('heroLogo');
+    l.classList.remove('anim'); void l.offsetWidth; l.classList.add('anim');
+    try { snd.currentTime = 0; snd.play(); } catch (e) {}
+  };
+  document.getElementById('playLogo').addEventListener('click', replayLogo);
+  document.getElementById('heroLogo').addEventListener('click', replayLogo);
+  // Aparición suave al hacer scroll
+  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } }), { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  // Lista de espera (todavía sin servidor: solo muestra el mensaje de confirmación)
+  document.getElementById('waitForm').addEventListener('submit', ev => {
+    ev.preventDefault();
+    ev.target.style.display = 'none';
+    document.getElementById('waitOk').style.display = 'block';
+  });
+</script>
+</body>
+</html>
