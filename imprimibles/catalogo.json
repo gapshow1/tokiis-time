@@ -1,0 +1,299 @@
+{
+ "version": 1,
+ "groups": [
+  {
+   "key": "2-4",
+   "label": "De 2 a 4 años",
+   "items": [
+    {
+     "title": "Colorea a los Tokiis",
+     "pdf": "2-4-colorea-a-los-tokiis.pdf",
+     "thumb": "2-4-colorea-a-los-tokiis.jpg",
+     "pages": 16
+    },
+    {
+     "title": "Colores en inglés",
+     "pdf": "2-4-colores-en-ingles.pdf",
+     "thumb": "2-4-colores-en-ingles.jpg",
+     "pages": 5
+    },
+    {
+     "title": "Laberintos (muy fáciles)",
+     "pdf": "2-4-laberintos-muy-faciles.pdf",
+     "thumb": "2-4-laberintos-muy-faciles.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Mandalas grandes",
+     "pdf": "2-4-mandalas-grandes.pdf",
+     "thumb": "2-4-mandalas-grandes.jpg",
+     "pages": 11
+    },
+    {
+     "title": "Números del 0 al 10",
+     "pdf": "2-4-numeros-del-0-al-10.pdf",
+     "thumb": "2-4-numeros-del-0-al-10.jpg",
+     "pages": 7
+    },
+    {
+     "title": "Trazos y figuras",
+     "pdf": "2-4-trazos-y-figuras.pdf",
+     "thumb": "2-4-trazos-y-figuras.jpg",
+     "pages": 19
+    }
+   ]
+  },
+  {
+   "key": "5-7",
+   "label": "De 5 a 7 años",
+   "items": [
+    {
+     "title": "Laberintos",
+     "pdf": "5-7-laberintos.pdf",
+     "thumb": "5-7-laberintos.jpg",
+     "pages": 15
+    },
+    {
+     "title": "Las letras (A a Z)",
+     "pdf": "5-7-las-letras-a-a-z.pdf",
+     "thumb": "5-7-las-letras-a-a-z.jpg",
+     "pages": 15
+    },
+    {
+     "title": "Mandalas",
+     "pdf": "5-7-mandalas.pdf",
+     "thumb": "5-7-mandalas.jpg",
+     "pages": 11
+    },
+    {
+     "title": "Números del 11 al 20",
+     "pdf": "5-7-numeros-del-11-al-20.pdf",
+     "thumb": "5-7-numeros-del-11-al-20.jpg",
+     "pages": 6
+    },
+    {
+     "title": "Pinta por números",
+     "pdf": "5-7-pinta-por-numeros.pdf",
+     "thumb": "5-7-pinta-por-numeros.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Sudokus de figuras",
+     "pdf": "5-7-sudokus-de-figuras.pdf",
+     "thumb": "5-7-sudokus-de-figuras.jpg",
+     "pages": 11
+    },
+    {
+     "title": "Sumas y restas",
+     "pdf": "5-7-sumas-y-restas.pdf",
+     "thumb": "5-7-sumas-y-restas.jpg",
+     "pages": 12
+    },
+    {
+     "title": "Une los puntos",
+     "pdf": "5-7-une-los-puntos.pdf",
+     "thumb": "5-7-une-los-puntos.jpg",
+     "pages": 15
+    }
+   ]
+  },
+  {
+   "key": "8-10",
+   "label": "De 8 a 10 años",
+   "items": [
+    {
+     "title": "Crucigramas en inglés",
+     "pdf": "8-10-crucigramas-en-ingles.pdf",
+     "thumb": "8-10-crucigramas-en-ingles.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Inventa un cuento",
+     "pdf": "8-10-inventa-un-cuento.pdf",
+     "thumb": "8-10-inventa-un-cuento.jpg",
+     "pages": 11
+    },
+    {
+     "title": "Laberintos (difíciles)",
+     "pdf": "8-10-laberintos-dificiles.pdf",
+     "thumb": "8-10-laberintos-dificiles.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Mandalas",
+     "pdf": "8-10-mandalas.pdf",
+     "thumb": "8-10-mandalas.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Matemática",
+     "pdf": "8-10-matematica.pdf",
+     "thumb": "8-10-matematica.jpg",
+     "pages": 20
+    },
+    {
+     "title": "Mi historieta",
+     "pdf": "8-10-mi-historieta.pdf",
+     "thumb": "8-10-mi-historieta.jpg",
+     "pages": 5
+    },
+    {
+     "title": "Pixel art",
+     "pdf": "8-10-pixel-art.pdf",
+     "thumb": "8-10-pixel-art.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Sopas de letras en inglés",
+     "pdf": "8-10-sopas-de-letras-en-ingles.pdf",
+     "thumb": "8-10-sopas-de-letras-en-ingles.jpg",
+     "pages": 19
+    },
+    {
+     "title": "Sudokus 6x6",
+     "pdf": "8-10-sudokus-6x6.pdf",
+     "thumb": "8-10-sudokus-6x6.jpg",
+     "pages": 11
+    },
+    {
+     "title": "Une los puntos (desafío)",
+     "pdf": "8-10-une-los-puntos-desafio.pdf",
+     "thumb": "8-10-une-los-puntos-desafio.jpg",
+     "pages": 13
+    }
+   ]
+  },
+  {
+   "key": "11-14",
+   "label": "De 11 a 14 años",
+   "items": [
+    {
+     "title": "Crucigramas en inglés",
+     "pdf": "11-14-crucigramas-en-ingles.pdf",
+     "thumb": "11-14-crucigramas-en-ingles.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Laberintos (expertos)",
+     "pdf": "11-14-laberintos-expertos.pdf",
+     "thumb": "11-14-laberintos-expertos.jpg",
+     "pages": 10
+    },
+    {
+     "title": "Mandalas detallados",
+     "pdf": "11-14-mandalas-detallados.pdf",
+     "thumb": "11-14-mandalas-detallados.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Matemática",
+     "pdf": "11-14-matematica.pdf",
+     "thumb": "11-14-matematica.jpg",
+     "pages": 12
+    },
+    {
+     "title": "Mi diario en inglés",
+     "pdf": "11-14-mi-diario-en-ingles.pdf",
+     "thumb": "11-14-mi-diario-en-ingles.jpg",
+     "pages": 9
+    },
+    {
+     "title": "Pixel art espejo",
+     "pdf": "11-14-pixel-art-espejo.pdf",
+     "thumb": "11-14-pixel-art-espejo.jpg",
+     "pages": 11
+    },
+    {
+     "title": "Sopas de letras (nivel experto)",
+     "pdf": "11-14-sopas-de-letras-nivel-experto.pdf",
+     "thumb": "11-14-sopas-de-letras-nivel-experto.jpg",
+     "pages": 17
+    },
+    {
+     "title": "Sudokus 9x9",
+     "pdf": "11-14-sudokus-9x9.pdf",
+     "thumb": "11-14-sudokus-9x9.jpg",
+     "pages": 16
+    }
+   ]
+  },
+  {
+   "key": "familia",
+   "label": "Toda la familia",
+   "items": [
+    {
+     "title": "Diplomas",
+     "pdf": "familia-diplomas.pdf",
+     "thumb": "familia-diplomas.jpg",
+     "pages": 7
+    },
+    {
+     "title": "Emociones y señaladores",
+     "pdf": "familia-emociones-y-senaladores.pdf",
+     "thumb": "familia-emociones-y-senaladores.jpg",
+     "pages": 5
+    },
+    {
+     "title": "Hojas para dibujar",
+     "pdf": "familia-hojas-para-dibujar.pdf",
+     "thumb": "familia-hojas-para-dibujar.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Juegos en inglés para jugar en familia",
+     "pdf": "familia-juegos-en-ingles-para-jugar-en-familia.pdf",
+     "thumb": "familia-juegos-en-ingles-para-jugar-en-familia.jpg",
+     "pages": 10
+    },
+    {
+     "title": "Los Tokiis y sus emociones (para colorear)",
+     "pdf": "familia-los-tokiis-y-sus-emociones-para-colorear.pdf",
+     "thumb": "familia-los-tokiis-y-sus-emociones-para-colorear.jpg",
+     "pages": 26
+    },
+    {
+     "title": "Tareas y rutinas",
+     "pdf": "familia-tareas-y-rutinas.pdf",
+     "thumb": "familia-tareas-y-rutinas.jpg",
+     "pages": 6
+    }
+   ]
+  },
+  {
+   "key": "cuentos",
+   "label": "Cuentos de los Tokiis",
+   "items": [
+    {
+     "title": "Cuento de Kiro - Kiro y la cola de lápiz",
+     "pdf": "cuentos-cuento-de-kiro-kiro-y-la-cola-de-lapiz.pdf",
+     "thumb": "cuentos-cuento-de-kiro-kiro-y-la-cola-de-lapiz.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Cuento de Kit - Kit y la cola de las palabras",
+     "pdf": "cuentos-cuento-de-kit-kit-y-la-cola-de-las-palabras.pdf",
+     "thumb": "cuentos-cuento-de-kit-kit-y-la-cola-de-las-palabras.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Cuento de Mumu - Mumu y la barriga de colores",
+     "pdf": "cuentos-cuento-de-mumu-mumu-y-la-barriga-de-colores.pdf",
+     "thumb": "cuentos-cuento-de-mumu-mumu-y-la-barriga-de-colores.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Cuento de Popi - Popi y sus alitas",
+     "pdf": "cuentos-cuento-de-popi-popi-y-sus-alitas.pdf",
+     "thumb": "cuentos-cuento-de-popi-popi-y-sus-alitas.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Cuento de Rexi - Rexi, el pequeño inventor",
+     "pdf": "cuentos-cuento-de-rexi-rexi-el-pequeno-inventor.pdf",
+     "thumb": "cuentos-cuento-de-rexi-rexi-el-pequeno-inventor.jpg",
+     "pages": 13
+    }
+   ]
+  }
+ ]
+}
