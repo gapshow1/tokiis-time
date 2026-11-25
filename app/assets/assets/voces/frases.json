@@ -1,0 +1,204 @@
+{
+ "intro": {
+  "kit": [
+   {
+    "title": "¡Hola, {name}!",
+    "say_title": "¡Hola!",
+    "text": "Soy Kit, un zorrito del planeta Toki, donde el tiempo se mide en aventuras. Me encantan las palabras: cada vez que aprendo una nueva, ¡mi cola se ilumina!",
+    "en": "Hello, {name}!",
+    "say_en": "Hello!",
+    "mood": "festejando"
+   },
+   {
+    "title": "Pantalla y pausa",
+    "say_title": "Pantalla y pausa",
+    "text": "Vas a usar la tablet un ratito y, después, hacemos una pausa juntos con una misión divertida en el mundo real: moverse, dibujar, construir, ayudar en casa…",
+    "en": "Let's play together!",
+    "say_en": "Let's play together!",
+    "mood": "contento"
+   },
+   {
+    "title": "Estrellas y premios",
+    "say_title": "Estrellas y premios",
+    "text": "Cada misión que haces te da estrellitas, minutos extra de pantalla y medallas con premios de verdad. ¡Mamá o papá las aprueban!",
+    "en": "Great job!",
+    "say_en": "Great job!",
+    "mood": "comiendo"
+   },
+   {
+    "title": "¡Y mucho inglés!",
+    "say_title": "¡Y mucho inglés!",
+    "text": "Vamos a aprender inglés jugando. Yo te enseño las palabras y tú me las dices. ¿Estás listo para la aventura?",
+    "en": "Let's go!",
+    "say_en": "Let's go!",
+    "mood": "festejando"
+   }
+  ],
+  "popi": [
+   {
+    "title": "¡Hola, {name}!",
+    "say_title": "¡Hola!",
+    "text": "Soy Popi, un perrito del planeta Toki, donde el tiempo se mide en aventuras. ¡No me puedo quedar quieto! Me encanta correr, saltar y bailar.",
+    "en": "Hello, {name}!",
+    "say_en": "Hello!",
+    "mood": "festejando"
+   },
+   {
+    "title": "Pantalla y pausa",
+    "say_title": "Pantalla y pausa",
+    "text": "Vas a usar la tablet un ratito y, después, hacemos una pausa juntos con una misión divertida en el mundo real: moverse, dibujar, construir, ayudar en casa…",
+    "en": "Let's play together!",
+    "say_en": "Let's play together!",
+    "mood": "contento"
+   },
+   {
+    "title": "Estrellas y premios",
+    "say_title": "Estrellas y premios",
+    "text": "Cada misión que haces te da estrellitas, minutos extra de pantalla y medallas con premios de verdad. ¡Mamá o papá las aprueban!",
+    "en": "Great job!",
+    "say_en": "Great job!",
+    "mood": "comiendo"
+   },
+   {
+    "title": "¡Y mucho inglés!",
+    "say_title": "¡Y mucho inglés!",
+    "text": "Vamos a aprender inglés jugando. Yo te enseño las palabras y tú me las dices. ¿Estás listo para la aventura?",
+    "en": "Let's go!",
+    "say_en": "Let's go!",
+    "mood": "festejando"
+   }
+  ],
+  "mumu": [
+   {
+    "title": "¡Hola, {name}!",
+    "say_title": "¡Hola!",
+    "text": "Soy Mumu, un osito del planeta Toki, donde el tiempo se mide en aventuras. Soy tranquilo y cariñoso. Mi barriga cambia de color según cómo me siento.",
+    "en": "Hello, {name}!",
+    "say_en": "Hello!",
+    "mood": "festejando"
+   },
+   {
+    "title": "Pantalla y pausa",
+    "say_title": "Pantalla y pausa",
+    "text": "Vas a usar la tablet un ratito y, después, hacemos una pausa juntos con una misión divertida en el mundo real: moverse, dibujar, construir, ayudar en casa…",
+    "en": "Let's play together!",
+    "say_en": "Let's play together!",
+    "mood": "contento"
+   },
+   {
+    "title": "Estrellas y premios",
+    "say_title": "Estrellas y premios",
+    "text": "Cada misión que haces te da estrellitas, minutos extra de pantalla y medallas con premios de verdad. ¡Mamá o papá las aprueban!",
+    "en": "Great job!",
+    "say_en": "Great job!",
+    "mood": "comiendo"
+   },
+   {
+    "title": "¡Y mucho inglés!",
+    "say_title": "¡Y mucho inglés!",
+    "text": "Vamos a aprender inglés jugando. Yo te enseño las palabras y tú me las dices. ¿Estás listo para la aventura?",
+    "en": "Let's go!",
+    "say_en": "Let's go!",
+    "mood": "festejando"
+   }
+  ],
+  "rexi": [
+   {
+    "title": "¡Hola, {name}!",
+    "say_title": "¡Hola!",
+    "text": "Soy Rexi, un dinosaurio bebé del planeta Toki, donde el tiempo se mide en aventuras. Me encanta inventar y construir cosas. Si algo se cae, ¡lo intento otra vez!",
+    "en": "Hello, {name}!",
+    "say_en": "Hello!",
+    "mood": "festejando"
+   },
+   {
+    "title": "Pantalla y pausa",
+    "say_title": "Pantalla y pausa",
+    "text": "Vas a usar la tablet un ratito y, después, hacemos una pausa juntos con una misión divertida en el mundo real: moverse, dibujar, construir, ayudar en casa…",
+    "en": "Let's play together!",
+    "say_en": "Let's play together!",
+    "mood": "contento"
+   },
+   {
+    "title": "Estrellas y premios",
+    "say_title": "Estrellas y premios",
+    "text": "Cada misión que haces te da estrellitas, minutos extra de pantalla y medallas con premios de verdad. ¡Mamá o papá las aprueban!",
+    "en": "Great job!",
+    "say_en": "Great job!",
+    "mood": "comiendo"
+   },
+   {
+    "title": "¡Y mucho inglés!",
+    "say_title": "¡Y mucho inglés!",
+    "text": "Vamos a aprender inglés jugando. Yo te enseño las palabras y tú me las dices. ¿Estás listo para la aventura?",
+    "en": "Let's go!",
+    "say_en": "Let's go!",
+    "mood": "festejando"
+   }
+  ],
+  "kiro": [
+   {
+    "title": "¡Hola, {name}!",
+    "say_title": "¡Hola!",
+    "text": "Soy Kiro, un gatito del planeta Toki, donde el tiempo se mide en aventuras. Me encanta leer y preguntar \"¿por qué?\". ¡Con mi cola de lápiz escribo todo!",
+    "en": "Hello, {name}!",
+    "say_en": "Hello!",
+    "mood": "festejando"
+   },
+   {
+    "title": "Pantalla y pausa",
+    "say_title": "Pantalla y pausa",
+    "text": "Vas a usar la tablet un ratito y, después, hacemos una pausa juntos con una misión divertida en el mundo real: moverse, dibujar, construir, ayudar en casa…",
+    "en": "Let's play together!",
+    "say_en": "Let's play together!",
+    "mood": "contento"
+   },
+   {
+    "title": "Estrellas y premios",
+    "say_title": "Estrellas y premios",
+    "text": "Cada misión que haces te da estrellitas, minutos extra de pantalla y medallas con premios de verdad. ¡Mamá o papá las aprueban!",
+    "en": "Great job!",
+    "say_en": "Great job!",
+    "mood": "comiendo"
+   },
+   {
+    "title": "¡Y mucho inglés!",
+    "say_title": "¡Y mucho inglés!",
+    "text": "Vamos a aprender inglés jugando. Yo te enseño las palabras y tú me las dices. ¿Estás listo para la aventura?",
+    "en": "Let's go!",
+    "say_en": "Let's go!",
+    "mood": "festejando"
+   }
+  ]
+ },
+ "fixed": [
+  {
+   "lang": "en",
+   "text": "Mission approved!"
+  },
+  {
+   "lang": "es",
+   "text": "¡Misión aprobada!"
+  },
+  {
+   "lang": "en",
+   "text": "Let's go!"
+  },
+  {
+   "lang": "es",
+   "text": "¡Es hora de una pausa!"
+  },
+  {
+   "lang": "en",
+   "text": "Pause time!"
+  },
+  {
+   "lang": "es",
+   "text": "¡En cinco minutos empieza la pausa! Elige tu misión."
+  },
+  {
+   "lang": "es",
+   "text": "Hora de descansar la pantalla."
+  }
+ ]
+}
