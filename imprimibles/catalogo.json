@@ -294,6 +294,54 @@
      "pages": 13
     }
    ]
+  },
+  {
+   "key": "temas",
+   "label": "Packs por tema",
+   "items": [
+    {
+     "title": "Astronautas y cohetes",
+     "pdf": "temas-astronautas-y-cohetes.pdf",
+     "thumb": "temas-astronautas-y-cohetes.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Dinosaurios",
+     "pdf": "temas-dinosaurios.pdf",
+     "thumb": "temas-dinosaurios.jpg",
+     "pages": 15
+    },
+    {
+     "title": "Emociones con emojis",
+     "pdf": "temas-emociones-con-emojis.pdf",
+     "thumb": "temas-emociones-con-emojis.jpg",
+     "pages": 15
+    },
+    {
+     "title": "Mariposas",
+     "pdf": "temas-mariposas.pdf",
+     "thumb": "temas-mariposas.jpg",
+     "pages": 11
+    },
+    {
+     "title": "Motos",
+     "pdf": "temas-motos.pdf",
+     "thumb": "temas-motos.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Muñecas de papel",
+     "pdf": "temas-munecas-de-papel.pdf",
+     "thumb": "temas-munecas-de-papel.jpg",
+     "pages": 13
+    },
+    {
+     "title": "Planetas",
+     "pdf": "temas-planetas.pdf",
+     "thumb": "temas-planetas.jpg",
+     "pages": 12
+    }
+   ]
   }
  ]
 }
