@@ -318,6 +318,12 @@
      "pages": 15
     },
     {
+     "title": "Fútbol",
+     "pdf": "temas-futbol.pdf",
+     "thumb": "temas-futbol.jpg",
+     "pages": 15
+    },
+    {
      "title": "Mariposas",
      "pdf": "temas-mariposas.pdf",
      "thumb": "temas-mariposas.jpg",
@@ -340,6 +346,12 @@
      "pdf": "temas-planetas.pdf",
      "thumb": "temas-planetas.jpg",
      "pages": 12
+    },
+    {
+     "title": "Unicornios y magia",
+     "pdf": "temas-unicornios-y-magia.pdf",
+     "thumb": "temas-unicornios-y-magia.jpg",
+     "pages": 15
     }
    ]
   }
